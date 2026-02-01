@@ -15,6 +15,18 @@ a {
 }
 
 /* navbar */
+.navbar .container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-toggler {
+  padding: 4px 8px;
+  margin-left: auto;
+}
+
+
+
 .navbar {
   background-color: white;
 }
@@ -63,8 +75,8 @@ a {
 @media (max-width: 768px) {
   
   .navbar ul li a:hover {
-    color: var(--blue);
-    background-color: #8bb9ff84;
+    color: white;
+    background-color: var(--oldblue-color);
   }
 
 .brand-logo img {
