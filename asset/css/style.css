@@ -1,17 +1,11 @@
 :root {
-  --main-color: #0056b3;
-  --second-color: #003d80;
-  --third-color: #e9f5eb;
-  --sixt-color: #fff;
-  --seventh-color: #1f242d;
-  --eight-color: #323946;
-  --bg-section: #e9f5eb;
-  --blue: #0b5ed7;
-  --green: #6ccf9b;
+  --blue: #256ea1;
+  --oldblue-color: #003d80;
+  --green: rgb(56,200,211);
   --yellow: #f4c430;
-  --text-dark: #1f2937;
+  --text-dark: #1f242d;
   --text-muted: #6b7280;
-  --card-bg: #ffffff;
+  --bg-section: #e9f5eb;
   --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   --radius: 16px;
 }
@@ -51,26 +45,46 @@ a {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
-  color: var(--green) !important;
+  color: var(--text-muted) !important;
 }
 
 .navbar ul li a {
-  color: var(--seventh-color);
+  color: var(--text-dark);
 }
 
 .navbar ul li a:hover {
-  color: var(--main-color);
+  color: var(--blue);
 }
 
 .navbar-brand span {
-  color: var(--main-color);
+  color: var(--blue);
 }
 
 @media (max-width: 768px) {
+  
   .navbar ul li a:hover {
     color: var(--blue);
     background-color: #8bb9ff84;
   }
+
+.brand-logo img {
+  width: 60px;
+}
+
+  .brand-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--main-color);
+  }
+  
+  .brand-tagline {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--green) !important;
+  }
+
+
   .kontakKami {
     margin-top: 7px;
   }
@@ -86,7 +100,7 @@ a {
 }
 
 .btncolor:hover {
-  background-color: rgb(10, 219, 10);
+  background-color: var(--blue);
   color: white;
 }
 
@@ -133,8 +147,8 @@ a {
   display: inline-block;
   padding: 6px 16px;
   border-radius: 999px;
-  border: 1px solid #6ccf9b;
-  color: #6ccf9b;
+  border: 1px solid rgb(56,200,211);
+  color: var(--green);
   font-size: 13px;
   font-weight: 600;
   margin-bottom: 24px;
@@ -149,7 +163,7 @@ a {
 }
 
 .hero h1 span {
-  color: #6ccf9b;
+  color: var(--green);
 }
 
 /* Description */
@@ -182,13 +196,13 @@ a {
 
 /* Primary */
 .btn-primary {
-  background-color: #6ccf9b;
+  background-color: var(--green);
   color: white;
   border: none;
 }
 
 .btn-primary:hover {
-  background-color: #0ae272;
+  background-color: var(--blue);
   transform: translateY(-5px);
 }
 
@@ -201,7 +215,8 @@ a {
 
 .btn-outline:hover {
   background-color: #ffffff;
-  color: #0b2e5e;
+  color: var(--blue);
+  border: none;
   transform: translateY(-5px);
 }
 
@@ -322,7 +337,7 @@ a {
   bottom: -16px;
   width: 80px;
   height: 80px;
-  background: #0d6efd;
+  background: var(--blue);
   border-radius: 12px;
   z-index: -1;
 }
@@ -332,7 +347,7 @@ a {
 }
 
 .about-content h2 {
-  color: #0d6efd;
+  color: var(--blue);
   margin-bottom: 12px;
 }
 
@@ -343,7 +358,7 @@ a {
 }
 
 .highlight {
-  color: #2bb673;
+  color: var(--green);
   font-weight: bold;
 }
 
@@ -364,7 +379,7 @@ a {
 .check {
   width: 20px;
   height: 20px;
-  background: #2bb673;
+  background: var(--green);
   color: #fff;
   border-radius: 50%;
   display: flex;
@@ -419,7 +434,7 @@ a {
 
 .layanan-header p {
   font-size: 16px;
-  color: var(--text-muted);
+  color: #333;
 }
 
 /* ===============================
@@ -437,7 +452,7 @@ a {
    CARD
 ================================ */
 .layanan-card {
-  background-color: var(--card-bg);
+  background-color: white;
   border-radius: var(--radius);
   padding: 32px;
   box-shadow: var(--shadow);
@@ -520,7 +535,7 @@ a {
 
 .layanan-card p {
   font-size: 15px;
-  color: var(--text-muted);
+  color: #333;
   line-height: 1.7;
   margin-bottom: 24px;
 }
@@ -645,7 +660,7 @@ a {
 
 .galeri-header h2 {
   font-size: 36px;
-  color: #0b5ed7;
+  color: var(--blue);
   margin-bottom: 10px;
 }
 
@@ -654,7 +669,7 @@ a {
   display: block;
   width: 60px;
   height: 4px;
-  background-color: #20c997;
+  background-color: var(--green);
   margin: 10px auto 0;
   border-radius: 2px;
 }
@@ -682,6 +697,10 @@ a {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   background-color: #fff;
   position: relative;
+}
+
+.galeri .item2 {
+  grid-column: span 2;
 }
 
 .galeri-item img {
@@ -720,9 +739,12 @@ a {
   .galeri-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .galeri .item2 {
+    grid-column: span 1;
+  }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .galeri-grid {
     grid-template-columns: 1fr;
   }
@@ -730,11 +752,14 @@ a {
   .galeri-header h2 {
     font-size: 28px;
   }
+  .galeri .item2 {
+    grid-column: span 1;
+  }
 }
 /* ========================================================================= */
 /* kontak form */
 #kontakform {
-  background: var(--main-color);
+  background: var(--oldblue-color);
   padding-top: 75px;
   padding-bottom: 50px;
   position: relative;
@@ -746,7 +771,7 @@ a {
   max-width: 1100px;
   margin: auto;
   gap: 30px;
-  background: var(--main-color);
+  background: var(--oldblue-color);
   color: #fff;
 }
 
@@ -755,7 +780,7 @@ a {
   position: absolute;
   width: 350px;
   height: 350px;
-  background: rgba(255, 255, 255, 0.15); /* transparan */
+  background: rgba(255, 255, 255, 0.15); 
   border-radius: 50%;
   bottom: -200px;
   left: -200px;
@@ -837,7 +862,7 @@ a {
   width: 40px;
   height: 40px;
   background: #fff;
-  color: #0a5cc0;
+  color: var(--blue);
   border-radius: 50%;
   margin-right: 10px;
   text-decoration: none;
@@ -884,7 +909,7 @@ a {
 .form-box button {
   width: 100%;
   padding: 14px;
-  background: #6ccf9b;
+  background: var(--green);
   border: none;
   color: #fff;
   font-size: 16px;
@@ -894,7 +919,7 @@ a {
 }
 
 .form-box button:hover {
-  background: #57b887;
+  background: var(--blue);
 }
 
 /* responsive brake point  */
@@ -933,7 +958,7 @@ a {
 
 /* Footer */
 .footer {
-  background-color: #0b3c78; /* biru tua */
+  background-color: var(--blue);
   color: #ffffff;
   padding: 20px 40px;
 }
@@ -1006,7 +1031,7 @@ a {
   height: 60px;
   bottom: 40px;
   left: 40px;
-  background-color: #25d366;
+  background-color: var(--green);
   color: #fff;
   border-radius: 50px;
   text-align: center;
@@ -1017,9 +1042,32 @@ a {
 
 .float:hover {
   background-color: #fff;
-  color: #25d366;
+  color: var(--green);
 }
 
 .my-float {
   margin-top: 16px;
+}
+
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+  .float {
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    bottom: 40px;
+    left: 40px;
+    background-color: var(--green);
+    color: #fff;
+    border-radius: 50px;
+    /* text-align: center; */
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+  }
+  .my-float {
+    margin-top: 5px;
+    margin-left: 3px;
+  }
 }
