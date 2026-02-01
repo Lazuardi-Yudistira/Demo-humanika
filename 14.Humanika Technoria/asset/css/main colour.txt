@@ -1,5 +1,0 @@
-main : #0056b3
-2nd : #003d80
-3rd : #e9f5eb
-4th : #78c995
-5th : #facc15
