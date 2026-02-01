@@ -50,7 +50,7 @@ a {
 .brand-name {
   font-size: 22px;
   font-weight: bold;
-  
+  color: var(--blue);
 }
 
 .brand-tagline {
@@ -84,16 +84,16 @@ a {
 }
 
   .brand-name {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
-    color: var(--main-color);
+    color: var(--blue);
   }
   
   .brand-tagline {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
-    letter-spacing: 1px;
-    color: var(--green) !important;
+    letter-spacing: 0.5px;
+    color: var(--text-muted) !important;
   }
 
 
