@@ -597,7 +597,82 @@ a {
 /* jadwal */
 #jadwal {
   padding-top: 75px;
+  padding-bottom: 50px;
+  position: relative;
+  overflow: hidden;
 }
+
+#jadwal:before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: rgba(255, 255, 255, 0.15); 
+  border-radius: 50%;
+  bottom: -200px;
+  left: -200px;
+}
+
+.jadwal-header h2 {
+  font-size: 36px;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.jadwal-header h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--green);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.jadwal-header p {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 15px auto 0;
+}
+
+.caption2 p {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.ilustrasi-wrapper {
+  display: flex;
+  justify-content: center; /* tengah horizontal */
+  align-items: center;
+}
+
+.ilustrasi-wrapper img {
+  width: 80%;
+}
+
+#jadwal .btn-outline-primary {
+  color: white;
+  background-color: var(--green);
+  border: none;
+}
+
+#jadwal .btn-outline-primary:hover {
+  background-color: var(--blue);
+  color: white;
+  border-color: var(--blue);
+  transform: translateY(-5px);
+}
+
+
+
 
 .badge {
   padding: 6px 14px;
@@ -689,7 +764,7 @@ a {
 .galeri-header p {
   font-size: 17px;
   font-weight: 500;
-  color: #6c757d;
+  color: var(--text-muted);
   max-width: 600px;
   margin: 15px auto 0;
 }
